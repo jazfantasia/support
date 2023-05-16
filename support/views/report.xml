@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_support_sla" model="ir.actions.act_window">
+        <field name="name">Daily SLA Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">support_pipeline</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Report
+            </p>
+        </field>
+    </record>
+    
+    <menuitem id="menu_support_root"
+              name="Support Pipeline"
+              sequence="3"/>
+
+    <menuitem id="menu_support_report"
+        name="Report"
+        parent="menu_support_root"
+        action="action_support_sla"
+        sequence="3"/>
+</odoo>

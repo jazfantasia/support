@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_male_client" model="ir.actions.act_window">
+        <field name="name">Male Patients</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.development</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="context">{'hide_gender': 1}</field>
+        <field name="domain">[('gender', '=', 'male')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first male client!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_clients"
+        name="Cleints"
+        parent="menu_estate_projects"
+        action="action_male_client"
+        sequence='10'/>
+
+</odoo>
